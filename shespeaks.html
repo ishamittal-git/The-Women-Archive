@@ -1,0 +1,4136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>The Women Archive | Stories. Voices. Perspectives.</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600;1,700&family=Caveat:wght@500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+:root {
+    --blue: #14304f;
+    --blue-dark: #0a1c30;
+    --blue-mid: #2c4a6e;
+    --blue-light: #eef2f6;
+    --cream: #f7f7f5;
+    --white: #ffffff;
+    --black: #181b1f;
+    --gray: #5b6472;
+    --border: #dde1e6;
+
+    --paper: #f4efe2;
+    --paper-dark: #e9e0cb;
+    --ochre: #c1832f;
+    --ochre-dark: #96631f;
+    --rose: #a24638;
+
+    --max-width: 1240px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "DM Sans", sans-serif;
+    background: var(--cream);
+    color: var(--black);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button,
+input,
+textarea,
+select {
+    font-family: inherit;
+}
+
+.container {
+    width: min(var(--max-width), calc(100% - 48px));
+    margin: auto;
+}
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(248,247,243,.96);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border);
+}
+
+.nav {
+    min-height: 78px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-family: "Playfair Display", serif;
+    font-size: 25px;
+    font-weight: 600;
+    letter-spacing: -1px;
+    cursor: pointer;
+}
+
+.logo span {
+    color: var(--blue);
+    font-style: italic;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    list-style: none;
+}
+
+.nav-tab {
+    font-size: 14px;
+    font-weight: 600;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--black);
+    padding: 8px 0;
+    transition: .2s ease;
+}
+
+.nav-tab:hover,
+.nav-tab.active {
+    color: var(--blue);
+    border-bottom: 2px solid var(--blue);
+}
+
+.nav-button {
+    background: var(--blue);
+    color: white !important;
+    padding: 11px 20px;
+    border-radius: 3px;
+    border-bottom: none !important;
+}
+
+.nav-button:hover {
+    background: var(--blue-dark);
+}
+
+.menu-button {
+    display: none;
+    border: 0;
+    background: transparent;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+/* =========================================================
+   BUTTONS
+========================================================= */
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 13px 23px;
+    border: 1px solid var(--blue);
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: .2s ease;
+    background: transparent;
+}
+
+.btn-primary {
+    background: var(--blue);
+    color: white;
+}
+
+.btn-primary:hover {
+    background: var(--blue-dark);
+}
+
+.btn-outline {
+    color: var(--blue);
+}
+
+.btn-outline:hover {
+    background: var(--blue-light);
+}
+
+/* =========================================================
+   TAB SYSTEM
+========================================================= */
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero-scrap {
+    position: relative;
+    overflow: hidden;
+    min-height: 720px;
+    padding: 70px 0 60px;
+
+    background:
+        radial-gradient(circle at 12% 20%, rgba(193,131,47,.16), transparent 42%),
+        radial-gradient(circle at 88% 12%, rgba(20,48,79,.10), transparent 40%),
+        radial-gradient(circle at 80% 85%, rgba(162,70,56,.12), transparent 45%),
+        var(--paper);
+
+    border-bottom: 2px solid var(--blue);
+}
+
+.hero-scrap::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(rgba(20,48,79,.05) 1px, transparent 1px);
+    background-size: 4px 4px;
+    opacity: .5;
+    pointer-events: none;
+}
+
+.hero-scrap-inner {
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 40px;
+}
+
+.hero-eyebrow {
+    font-family: "Caveat", cursive;
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--ochre-dark);
+    transform: rotate(-2deg);
+    margin-bottom: 6px;
+}
+
+.hero-wordmark {
+    font-family: "Playfair Display", serif;
+    font-style: italic;
+    font-weight: 700;
+    font-size: clamp(52px, 8vw, 100px);
+    line-height: .95;
+    letter-spacing: -2px;
+    color: var(--blue);
+}
+
+.hero-wordmark .line2 {
+    color: var(--rose);
+}
+
+.scribble-underline {
+    display: block;
+    width: 260px;
+    max-width: 70%;
+    height: 22px;
+    margin: 10px auto 22px;
+}
+
+.hero-scrap-copy {
+    font-size: 16px;
+    color: var(--gray);
+    max-width: 480px;
+    margin: 0 auto 30px;
+}
+
+.hero-scrap-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+}
+
+/* =========================================================
+   STICKERS
+========================================================= */
+
+.sticker {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    width: 128px;
+    padding: 14px 10px 12px;
+    background: var(--white);
+    border: 2px solid var(--blue-dark);
+    border-radius: 10px;
+    box-shadow: 5px 6px 0 rgba(20,48,79,.14);
+    text-align: center;
+    transition: transform .2s ease;
+}
+
+.sticker:hover {
+    transform: translateY(-6px) rotate(0deg) !important;
+}
+
+.sticker svg {
+    width: 40px;
+    height: 40px;
+}
+
+.sticker span {
+    font-family: "Caveat", cursive;
+    font-weight: 700;
+    font-size: 19px;
+    color: var(--blue-dark);
+}
+
+.sticker::after {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%) rotate(-6deg);
+    width: 46px;
+    height: 18px;
+    background: rgba(193,131,47,.55);
+    border: 1px solid rgba(150,99,31,.4);
+}
+
+.sticker-about {
+    top: 6%;
+    left: 2%;
+    transform: rotate(-7deg);
+}
+
+.sticker-submit {
+    top: 60%;
+    left: 0%;
+    transform: rotate(6deg);
+}
+
+.sticker-issues {
+    top: 4%;
+    right: 2%;
+    transform: rotate(8deg);
+}
+
+.sticker-join {
+    top: 58%;
+    right: 1%;
+    transform: rotate(-5deg);
+}
+
+/* =========================================================
+   BLOG HERO NOTE
+========================================================= */
+
+.blob-note {
+    position: absolute;
+    bottom: 3%;
+    left: 50%;
+    transform: translateX(-50%) rotate(-3deg);
+    width: 250px;
+    background: var(--blue-dark);
+    color: var(--paper);
+    padding: 20px 24px;
+    border-radius: 46% 54% 61% 39% / 45% 40% 60% 55%;
+    text-align: center;
+    box-shadow: 6px 8px 0 rgba(0,0,0,.12);
+    cursor: pointer;
+    border: none;
+}
+
+.blob-note span.tag {
+    display: block;
+    font-family: "Caveat", cursive;
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--ochre);
+    margin-bottom: 2px;
+}
+
+.blob-note p {
+    font-family: "Playfair Display", serif;
+    font-style: italic;
+    font-size: 15px;
+    line-height: 1.35;
+}
+
+/* =========================================================
+   INTRO
+========================================================= */
+
+.intro-strip {
+    background: var(--blue);
+    color: white;
+    padding: 24px 0;
+}
+
+.intro-strip-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+
+.intro-strip p {
+    font-family: "Playfair Display", serif;
+    font-size: 20px;
+    font-style: italic;
+}
+
+.intro-strip span {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    white-space: nowrap;
+}
+
+/* =========================================================
+   SECTIONS
+========================================================= */
+
+.section {
+    padding: 95px 0;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 30px;
+    margin-bottom: 45px;
+}
+
+.section-label {
+    color: var(--blue);
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.section-title {
+    font-family: "Playfair Display", serif;
+    font-size: clamp(38px, 5vw, 58px);
+    line-height: 1;
+    letter-spacing: -2px;
+}
+
+.section-description {
+    max-width: 390px;
+    color: var(--gray);
+    font-size: 15px;
+}
+
+/* =========================================================
+   FOUNDER MESSAGE
+========================================================= */
+
+.founder-message {
+    background: var(--white);
+    position: relative;
+    overflow: hidden;
+}
+
+.founder-message::before {
+    content: "“";
+    position: absolute;
+    top: -35px;
+    right: 7%;
+    font-family: "Playfair Display", serif;
+    font-size: 240px;
+    line-height: 1;
+    color: var(--blue-light);
+    pointer-events: none;
+}
+
+.founder-grid {
+    display: grid;
+    grid-template-columns: .85fr 1.5fr;
+    gap: 70px;
+    align-items: center;
+}
+
+.founder-intro {
+    position: relative;
+    z-index: 1;
+}
+
+.founder-label {
+    color: var(--ochre-dark);
+    font-family: "Caveat", cursive;
+    font-size: 25px;
+    font-weight: 600;
+    transform: rotate(-2deg);
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.founder-intro h2 {
+    font-family: "Playfair Display", serif;
+    font-size: clamp(38px, 5vw, 58px);
+    line-height: 1.02;
+    letter-spacing: -2px;
+}
+
+.founder-note {
+    position: relative;
+    z-index: 1;
+    border-left: 3px solid var(--ochre);
+    padding: 5px 0 5px 35px;
+}
+
+.founder-note p {
+    font-family: "Playfair Display", serif;
+    font-size: 17px;
+    line-height: 1.85;
+    margin-bottom: 20px;
+}
+
+.founder-note p:last-of-type {
+    margin-bottom: 25px;
+}
+
+.founder-signature {
+    font-family: "Caveat", cursive;
+    font-size: 27px;
+    font-weight: 700;
+    color: var(--blue);
+}
+
+.founder-role {
+    display: block;
+    font-family: "DM Sans", sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--gray);
+    margin-top: 2px;
+}
+
+.founder-photo-frame {
+    position: relative;
+    width: 210px;
+    background: var(--white);
+    padding: 12px 12px 32px;
+    box-shadow: 6px 8px 0 rgba(20,48,79,.12);
+    transform: rotate(-4deg);
+    margin: 0 0 30px;
+}
+
+.founder-photo-frame .photo-tape {
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%) rotate(-3deg);
+    width: 66px;
+    height: 20px;
+    background: rgba(193,131,47,.55);
+    border: 1px solid rgba(150,99,31,.4);
+}
+
+.founder-photo {
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    display: block;
+}
+
+.founder-photo-caption {
+    font-family: "Caveat", cursive;
+    font-size: 15px;
+    color: var(--blue-mid);
+    text-align: center;
+    display: block;
+    margin-top: 8px;
+}
+
+/* =========================================================
+   CALL FOR ENTRIES
+========================================================= */
+
+.submit-section {
+    background: var(--blue-light);
+}
+
+.cfe-banner {
+    background: var(--blue-dark);
+    color: white;
+    padding: 55px 60px;
+    position: relative;
+    overflow: hidden;
+}
+
+.cfe-banner::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(rgba(255,255,255,.05) 1px, transparent 1px);
+    background-size: 5px 5px;
+    pointer-events: none;
+}
+
+.cfe-content {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.cfe-tag {
+    display: inline-block;
+    font-family: "Caveat", cursive;
+    font-size: 22px;
+    color: var(--ochre);
+    transform: rotate(-2deg);
+    margin-bottom: 10px;
+}
+
+.cfe-content h3 {
+    font-family: "Playfair Display", serif;
+    font-size: clamp(34px, 4.5vw, 50px);
+    line-height: 1.05;
+    letter-spacing: -1px;
+    margin-bottom: 16px;
+}
+
+.cfe-content h3 em {
+    color: var(--ochre);
+    font-style: italic;
+}
+
+.cfe-content p {
+    color: #c3cfdd;
+    font-size: 15px;
+    max-width: 480px;
+}
+
+.cfe-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 26px;
+    margin: 22px 0 0;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255,255,255,.18);
+}
+
+.cfe-meta div {
+    display: flex;
+    flex-direction: column;
+}
+
+.cfe-meta span.label {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #8fa4bc;
+}
+
+.cfe-meta span.value {
+    font-family: "Playfair Display", serif;
+    font-size: 16px;
+    color: white;
+}
+
+.cfe-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+}
+
+.cfe-actions .btn-primary {
+    background: var(--ochre);
+    border-color: var(--ochre);
+    color: var(--blue-dark);
+}
+
+/* =========================================================
+   MAGAZINE ISSUES
+========================================================= */
+
+.issues {
+    background: var(--cream);
+}
+
+.issue-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.issue {
+    cursor: pointer;
+}
+
+.issue-cover {
+    aspect-ratio: 3 / 4;
+    position: relative;
+    overflow: hidden;
+    background: var(--blue);
+    color: white;
+    transition: transform .25s ease;
+}
+
+.issue-cover img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform .4s ease;
+}
+
+.issue-cover::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to top,
+        rgba(10,28,48,.88),
+        rgba(10,28,48,.15) 65%,
+        rgba(10,28,48,.15)
+    );
+}
+
+.issue:hover .issue-cover {
+    transform: translateY(-7px);
+}
+
+.issue:hover .issue-cover img {
+    transform: scale(1.04);
+}
+
+.issue-number {
+    position: absolute;
+    top: 22px;
+    left: 22px;
+    z-index: 2;
+    font-size: 10px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.issue-cover h3 {
+    position: absolute;
+    left: 22px;
+    bottom: 22px;
+    z-index: 2;
+    font-family: "Playfair Display", serif;
+    font-size: 36px;
+    line-height: 1;
+}
+
+.issue-meta {
+    padding-top: 15px;
+}
+
+.issue-meta strong {
+    display: block;
+    font-family: "Playfair Display", serif;
+    font-size: 19px;
+}
+
+.issue-meta span {
+    display: block;
+    color: var(--gray);
+    font-size: 12px;
+    margin-bottom: 5px;
+}
+
+.coming-soon {
+    font-size: 11px !important;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--ochre-dark) !important;
+    font-weight: 700;
+    margin-top: 6px;
+}
+
+.issue-link {
+    display: inline-block;
+    margin-top: 8px;
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--blue);
+}
+
+/* =========================================================
+   INTERVIEWS
+========================================================= */
+
+.interviews {
+    background: var(--blue-dark);
+    color: white;
+}
+
+.interviews .section-label {
+    color: #a9bbcd;
+}
+
+.interviews .section-description {
+    color: #b7c2d0;
+}
+
+.interview-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.interview-card {
+    border: 1px solid rgba(255,255,255,.2);
+    background: rgba(255,255,255,.04);
+    overflow: hidden;
+}
+
+.interview-image {
+    height: 290px;
+    background-size: cover;
+    background-position: center;
+}
+
+.interview-content {
+    padding: 24px;
+}
+
+.interview-content .category {
+    color: #a9bbcd;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+}
+
+.interview-content h3 {
+    font-family: "Playfair Display", serif;
+    font-size: 27px;
+    line-height: 1.15;
+    margin-bottom: 10px;
+}
+
+.interview-content p {
+    color: #b7c2d0;
+    font-size: 13px;
+}
+
+.interview-coming {
+    display: inline-block;
+    margin-top: 15px;
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--ochre);
+    font-weight: 700;
+}
+
+/* =========================================================
+   BLOG
+========================================================= */
+
+.blog-list {
+    border-top: 1px solid var(--border);
+}
+
+.blog-item {
+    display: grid;
+    grid-template-columns: 160px 1fr auto;
+    gap: 30px;
+    padding: 27px 0;
+    border-bottom: 1px solid var(--border);
+    align-items: center;
+    width: 100%;
+    background: none;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    text-align: left;
+    cursor: pointer;
+}
+
+.blog-feature-image {
+    width: 160px;
+    height: 105px;
+    object-fit: cover;
+}
+
+.blog-number {
+    display: none;
+}
+
+.blog-item h3 {
+    font-family: "Playfair Display", serif;
+    font-size: 24px;
+    margin-bottom: 4px;
+}
+
+.blog-item p {
+    color: var(--gray);
+    font-size: 13px;
+}
+
+.blog-arrow {
+    font-size: 22px;
+    color: var(--blue);
+}
+
+.blog-coming {
+    display: inline-block;
+    margin-top: 8px;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--ochre-dark);
+    font-weight: 700;
+}
+
+/* =========================================================
+   BLOG ARTICLE
+========================================================= */
+
+.blog-article {
+    display: none;
+    background: var(--cream);
+    padding: 80px 0 100px;
+}
+
+.blog-article.active {
+    display: block;
+}
+
+.article-container {
+    max-width: 850px;
+    margin: auto;
+    background: var(--white);
+    padding: 60px;
+    border: 1px solid var(--border);
+}
+
+.article-feature-image {
+    width: 100%;
+    height: 390px;
+    object-fit: cover;
+    margin-bottom: 35px;
+}
+
+.article-category {
+    color: var(--blue);
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.article-title {
+    font-family: "Playfair Display", serif;
+    font-size: clamp(42px, 6vw, 68px);
+    line-height: 1.05;
+    margin-bottom: 18px;
+}
+
+.article-meta {
+    color: var(--gray);
+    font-size: 13px;
+    margin-bottom: 40px;
+}
+
+.article-divider {
+    border: 0;
+    border-top: 1px solid var(--border);
+    margin-bottom: 40px;
+}
+
+.article-content p {
+    font-size: 17px;
+    line-height: 1.85;
+    margin-bottom: 25px;
+}
+
+.article-content h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 30px;
+    line-height: 1.25;
+    margin: 45px 0 15px;
+}
+
+.article-back {
+    margin-bottom: 30px;
+}
+
+/* =========================================================
+   ABOUT US
+========================================================= */
+
+.about-magazine-page {
+    padding: 85px 0 110px;
+    background:
+        radial-gradient(circle at 10% 10%, rgba(193,131,47,.10), transparent 30%),
+        radial-gradient(circle at 90% 75%, rgba(162,70,56,.08), transparent 30%),
+        var(--cream);
+    overflow: hidden;
+}
+
+.about-paper-shadow {
+    max-width: 1120px;
+    margin: 0 auto;
+    transform: rotate(-.35deg);
+    filter: drop-shadow(12px 16px 0 rgba(20,48,79,.08));
+}
+
+.about-paper {
+    position: relative;
+    padding: 58px 68px 30px;
+    background: #fbf6e9;
+    border: 1px solid #d9ceb6;
+    background-image: radial-gradient(rgba(80,60,30,.055) .7px, transparent .7px);
+    background-size: 5px 5px;
+}
+
+.paper-tape {
+    position:absolute;
+    width:95px;
+    height:25px;
+    background:rgba(193,131,47,.35);
+    top:-10px;
+}
+
+.tape-one {
+    left:14%;
+    transform:rotate(-5deg);
+}
+
+.tape-two {
+    right:13%;
+    transform:rotate(7deg);
+}
+
+.paper-topline {
+    font-size:10px;
+    letter-spacing:3px;
+    color:#7c6b52;
+    border-bottom:1px solid #cfc2a6;
+    padding-bottom:12px;
+}
+
+.paper-heading-wrap {
+    text-align:center;
+    padding:42px 0 38px;
+}
+
+.paper-kicker {
+    font-family:"Caveat",cursive;
+    color:var(--ochre-dark);
+    font-size:23px;
+}
+
+.paper-heading-wrap h1 {
+    font-family:"Playfair Display",serif;
+    font-size:clamp(58px,8vw,94px);
+    line-height:.9;
+    color:var(--blue-dark);
+    letter-spacing:-3px;
+}
+
+.paper-heading-wrap h1 em {
+    color:var(--rose);
+}
+
+.paper-rule {
+    display:block;
+    width:150px;
+    height:3px;
+    background:var(--ochre);
+    margin:22px auto 0;
+    transform:rotate(-2deg);
+}
+
+.magazine-columns {
+    display:grid;
+    grid-template-columns:1.15fr 1fr .8fr;
+    gap:42px;
+    border-top:1px solid #cfc2a6;
+    padding-top:32px;
+}
+
+.magazine-column p {
+    font-family:"Playfair Display",serif;
+    font-size:15px;
+    line-height:1.85;
+    margin-bottom:20px;
+    color:#302d29;
+}
+
+.dropcap {
+    float:left;
+    font-family:"Playfair Display",serif;
+    font-size:68px;
+    line-height:.78;
+    color:var(--rose);
+    padding:7px 8px 0 0;
+}
+
+.margin-note {
+    font-size:9px;
+    letter-spacing:2px;
+    color:var(--ochre-dark);
+    font-weight:700;
+    margin-bottom:14px;
+}
+
+.ink-box {
+    border:1px solid #8b7a5b;
+    padding:25px 20px;
+    margin-bottom:27px;
+    transform:rotate(1.2deg);
+    background:rgba(255,255,255,.28);
+}
+
+.ink-box span {
+    display:block;
+    font-size:9px;
+    letter-spacing:2px;
+    color:#806c4b;
+    margin-bottom:9px;
+}
+
+.ink-box strong {
+    font-family:"Playfair Display",serif;
+    font-size:23px;
+    line-height:1.25;
+    color:var(--blue);
+}
+
+.visual-column {
+    min-height:390px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+
+.scribble-circle {
+    width:205px;
+    height:205px;
+    border:2px solid var(--rose);
+    border-radius:48% 52% 46% 54%;
+    transform:rotate(-8deg);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    margin:18px 0;
+}
+
+.scribble-circle span {
+    font-family:"Caveat",cursive;
+    font-size:29px;
+    line-height:1.05;
+    color:var(--rose);
+    transform:rotate(8deg);
+}
+
+.leaf-doodle svg {
+    width:150px;
+    height:130px;
+}
+
+.hand-note {
+    font-family:"Caveat",cursive;
+    color:var(--blue);
+    font-size:22px;
+    line-height:1.05;
+    transform:rotate(-4deg);
+    margin-top:3px;
+}
+
+.paper-footer {
+    display:flex;
+    justify-content:space-between;
+    margin-top:35px;
+    padding-top:13px;
+    border-top:1px solid #cfc2a6;
+    font-size:9px;
+    letter-spacing:2px;
+    color:#7c6b52;
+}
+
+/* =========================================================
+   FOUNDER PAPER
+========================================================= */
+
+.founder-leaf-paper {
+    position:relative;
+    max-width:920px;
+    margin:95px auto 0;
+    transform:rotate(.8deg);
+    background:#e6d9b9;
+    border:1px solid #c8b78e;
+    box-shadow:10px 13px 0 rgba(20,48,79,.10);
+}
+
+.leaf-paper-texture {
+    position:absolute;
+    inset:0;
+    opacity:.35;
+    background-image:radial-gradient(rgba(75,58,31,.08) .8px, transparent .8px);
+    background-size:6px 6px;
+    pointer-events:none;
+}
+
+.leaf-paper-inner {
+    position:relative;
+    padding:70px 90px 65px;
+}
+
+.leaf-paper-label {
+    font-size:10px;
+    font-weight:700;
+    letter-spacing:3px;
+    color:#6d5a39;
+    margin-bottom:10px;
+}
+
+.leaf-paper-inner h2 {
+    font-family:"Playfair Display",serif;
+    font-size:clamp(42px,6vw,68px);
+    color:var(--blue-dark);
+    line-height:1;
+}
+
+.leaf-paper-inner h2 em {
+    color:var(--rose);
+}
+
+.leaf-divider {
+    width:100%;
+    height:1px;
+    background:#a99468;
+    margin:25px 0 32px;
+}
+
+.founder-bio-grid {
+    display:grid;
+    grid-template-columns:1.4fr 1fr;
+    gap:55px;
+    align-items:start;
+}
+
+.founder-letter p {
+    font-family:"Playfair Display",serif;
+    font-size:17px;
+    line-height:1.9;
+    color:#3b342a;
+    margin-bottom:19px;
+}
+
+.bio-dropcap {
+    float:left;
+    font-family:"Playfair Display",serif;
+    font-size:58px;
+    line-height:.75;
+    color:var(--rose);
+    padding:6px 8px 0 0;
+}
+
+.founder-quote {
+    font-family:"Playfair Display",serif;
+    font-style:italic;
+    font-size:19px !important;
+    line-height:1.6 !important;
+    color:var(--blue) !important;
+    border-left:3px solid var(--ochre);
+    padding-left:22px;
+    margin-top:30px !important;
+}
+
+.founder-credentials {
+    display:flex;
+    flex-direction:column;
+    gap:22px;
+}
+
+.credential-block {
+    border:1px solid #a99468;
+    background:rgba(255,255,255,.35);
+    padding:18px 20px;
+    transform:rotate(-.6deg);
+}
+
+.credential-block:nth-child(even) {
+    transform:rotate(.6deg);
+}
+
+.credential-block.accent {
+    background:rgba(162,70,56,.08);
+    border-color:var(--rose);
+}
+
+.credential-label {
+    display:block;
+    font-size:9px;
+    font-weight:700;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    color:var(--ochre-dark);
+    margin-bottom:8px;
+}
+
+.credential-value {
+    font-family:"Playfair Display",serif;
+    font-size:15px;
+    line-height:1.55;
+    color:#3b342a;
+}
+
+.drawn-pen {
+    position:absolute;
+    right:-45px;
+    top:-62px;
+    width:210px;
+    transform:rotate(-9deg);
+    z-index:3;
+}
+
+.drawn-pen svg {
+    width:100%;
+    filter:drop-shadow(4px 6px 0 rgba(0,0,0,.12));
+}
+
+.founder-stamp {
+    margin-top:45px;
+    padding-top:25px;
+    border-top:1px solid #a99468;
+    display:flex;
+    align-items:center;
+    justify-content:flex-end;
+    gap:20px;
+}
+
+.stamp-ring {
+    width:76px;
+    height:76px;
+    border-radius:50%;
+    border:2px solid var(--rose);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    transform:rotate(-8deg);
+}
+
+.stamp-ring span {
+    font-family:"Caveat",cursive;
+    font-weight:700;
+    font-size:13px;
+    line-height:1.15;
+    color:var(--rose);
+}
+
+.stamp-text {
+    display:flex;
+    flex-direction:column;
+    align-items:flex-end;
+    text-align:right;
+}
+
+.stamp-text strong {
+    font-family:"Caveat",cursive;
+    font-size:32px;
+    color:var(--blue);
+}
+
+.stamp-text small {
+    font-size:9px;
+    letter-spacing:2px;
+    text-transform:uppercase;
+}
+
+/* =========================================================
+   FORMS
+========================================================= */
+
+.form-page {
+    padding:80px 0 100px;
+    background:var(--cream);
+}
+
+.form-container {
+    max-width:900px;
+    margin:auto;
+    background:white;
+    border:1px solid var(--border);
+    padding:55px;
+}
+
+.form-header h1 {
+    font-family:"Playfair Display",serif;
+    font-size:52px;
+    line-height:1;
+    margin-bottom:18px;
+}
+
+.form-header p {
+    color:var(--gray);
+    max-width:680px;
+}
+
+.form-divider {
+    border:0;
+    border-top:1px solid var(--border);
+    margin:35px 0;
+}
+
+.form-grid {
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:20px;
+}
+
+.form-group {
+    margin-bottom:20px;
+}
+
+.form-group.full {
+    grid-column:1 / -1;
+}
+
+.form-group label {
+    display:block;
+    font-size:12px;
+    font-weight:700;
+    margin-bottom:7px;
+}
+
+.required {
+    color:#a00000;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    width:100%;
+    border:1px solid var(--border);
+    background:#fafafa;
+    padding:13px 14px;
+    font-size:14px;
+    color:var(--black);
+}
+
+.form-group textarea {
+    min-height:140px;
+    resize:vertical;
+}
+
+.file-box {
+    border:1px dashed #bfc2c5;
+    background:#fafafa;
+    padding:18px;
+}
+
+.form-note {
+    color:var(--gray);
+    font-size:11px;
+    margin-top:5px;
+}
+
+.checkbox {
+    display:flex;
+    gap:10px;
+    align-items:flex-start;
+    margin:20px 0;
+}
+
+.checkbox input {
+    width:auto;
+    margin-top:5px;
+}
+
+.checkbox label {
+    color:var(--gray);
+    font-size:12px;
+    font-weight:400;
+}
+
+.form-success,
+.form-error {
+    display:none;
+    padding:14px 16px;
+    font-size:13px;
+    margin-bottom:24px;
+}
+
+.form-success.active,
+.form-error.active {
+    display:block;
+}
+
+.form-success {
+    background:#eaf6ee;
+    border:1px solid #bfe4cc;
+    color:#1c6b37;
+}
+
+.form-error {
+    background:#fbeaea;
+    border:1px solid #f0c4c4;
+    color:#a00000;
+}
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer {
+    background:#0a1c30;
+    color:white;
+    padding:65px 0 25px;
+}
+
+.footer-grid {
+    display:grid;
+    grid-template-columns:1.5fr 1fr 1fr;
+    gap:50px;
+    padding-bottom:50px;
+    border-bottom:1px solid rgba(255,255,255,.15);
+}
+
+.footer-logo {
+    font-family:"Playfair Display",serif;
+    font-size:28px;
+}
+
+.footer-logo span {
+    color:#8fa4bc;
+    font-style:italic;
+}
+
+.footer-column h4 {
+    font-size:11px;
+    text-transform:uppercase;
+    letter-spacing:2px;
+    color:#8fa4bc;
+    margin-bottom:18px;
+}
+
+.footer-column a {
+    display:block;
+    color:#b7c2d0;
+    font-size:13px;
+    margin-bottom:10px;
+}
+
+.footer-column a:hover {
+    color:white;
+}
+
+.footer-bottom {
+    display:flex;
+    justify-content:space-between;
+    padding-top:25px;
+    color:#7c8797;
+    font-size:11px;
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width:1050px) {
+
+    .issue-grid {
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .interview-grid {
+        grid-template-columns:1fr 1fr;
+    }
+
+    .footer-grid {
+        grid-template-columns:1fr 1fr;
+    }
+}
+
+@media (max-width:900px) {
+
+    .hero-scrap {
+        min-height:0;
+        padding:50px 0 40px;
+    }
+
+    .sticker {
+        position:static;
+        transform:none !important;
+        width:auto;
+        flex-direction:row;
+        gap:10px;
+        padding:10px 16px;
+    }
+
+    .sticker-row {
+        display:flex;
+        flex-wrap:wrap;
+        justify-content:center;
+        gap:12px;
+        margin-top:30px;
+    }
+
+    .sticker::after {
+        display:none;
+    }
+
+    .blob-note {
+        position:static;
+        transform:none;
+        margin:30px auto 0;
+        border-radius:18px;
+        width:100%;
+        max-width:320px;
+    }
+
+    .founder-grid,
+    .founder-bio-grid {
+        grid-template-columns:1fr;
+        gap:35px;
+    }
+
+    .founder-photo-frame {
+        margin:0 auto 26px;
+    }
+
+    .cfe-banner {
+        padding:40px 26px;
+    }
+
+    .cfe-content {
+        grid-template-columns:1fr;
+    }
+
+    .about-paper {
+        padding:45px 32px 25px;
+    }
+
+    .magazine-columns {
+        grid-template-columns:1fr;
+        gap:25px;
+    }
+
+    .visual-column {
+        min-height:auto;
+    }
+
+    .founder-leaf-paper {
+        margin-top:75px;
+    }
+
+    .leaf-paper-inner {
+        padding:55px 38px 45px;
+    }
+
+    .drawn-pen {
+        right:-15px;
+        top:-65px;
+        width:165px;
+    }
+}
+
+@media (max-width:760px) {
+
+    .container {
+        width:min(100% - 32px, var(--max-width));
+    }
+
+    .logo {
+        font-size:22px;
+    }
+
+    .menu-button {
+        display:block;
+    }
+
+    .nav-links {
+        display:none;
+        position:absolute;
+        top:68px;
+        left:0;
+        width:100%;
+        background:var(--cream);
+        border-bottom:1px solid var(--border);
+        padding:25px 20px;
+        flex-direction:column;
+        align-items:flex-start;
+    }
+
+    .nav-links.active {
+        display:flex;
+    }
+
+    .intro-strip-inner {
+        flex-direction:column;
+        align-items:flex-start;
+    }
+
+    .section-header {
+        flex-direction:column;
+        align-items:flex-start;
+    }
+
+    .issue-grid {
+        grid-template-columns:1fr 1fr;
+    }
+
+    .interview-grid {
+        grid-template-columns:1fr;
+    }
+
+    .blog-item {
+        grid-template-columns:110px 1fr auto;
+        gap:18px;
+    }
+
+    .blog-feature-image {
+        width:110px;
+        height:90px;
+    }
+
+    .form-container {
+        padding:30px 22px;
+    }
+
+    .form-header h1 {
+        font-size:42px;
+    }
+
+    .form-grid {
+        grid-template-columns:1fr;
+    }
+
+    .form-group.full {
+        grid-column:auto;
+    }
+
+    .article-container {
+        padding:35px 22px;
+    }
+
+    .article-feature-image {
+        height:240px;
+    }
+
+    .article-content p {
+        font-size:16px;
+    }
+
+    .founder-stamp {
+        justify-content:flex-start;
+    }
+}
+
+@media (max-width:600px) {
+
+    .about-magazine-page {
+        padding:55px 0 80px;
+    }
+
+    .about-paper {
+        padding:35px 20px 20px;
+    }
+
+    .paper-heading-wrap {
+        padding:32px 0;
+    }
+
+    .paper-topline {
+        font-size:8px;
+        letter-spacing:1.5px;
+    }
+
+    .paper-footer {
+        gap:10px;
+        font-size:7px;
+    }
+
+    .founder-leaf-paper {
+        margin:65px 8px 0;
+    }
+
+    .leaf-paper-inner {
+        padding:50px 24px 40px;
+    }
+
+    .founder-letter p {
+        font-size:15px;
+    }
+
+    .drawn-pen {
+        width:135px;
+        right:-5px;
+        top:-52px;
+    }
+}
+
+@media (max-width:480px) {
+
+    .issue-grid {
+        grid-template-columns:1fr;
+    }
+
+    .footer-grid {
+        grid-template-columns:1fr;
+    }
+
+    .footer-bottom {
+        flex-direction:column;
+    }
+
+    .blog-item {
+        grid-template-columns:1fr auto;
+    }
+
+    .blog-feature-image {
+        grid-column:1 / -1;
+        width:100%;
+        height:190px;
+    }
+
+    .blog-item h3 {
+        font-size:21px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- =========================================================
+     HEADER
+========================================================= -->
+
+<header class="site-header">
+
+    <nav class="container nav">
+
+        <div class="logo" onclick="switchTab('home')">
+            <span>The Women Archive</span>
+        </div>
+
+        <button
+            class="menu-button"
+            id="menuButton"
+            aria-label="Open navigation">
+            ☰
+        </button>
+
+        <ul class="nav-links" id="navLinks">
+
+            <li>
+                <button class="nav-tab active"
+                    onclick="switchTab('home')">
+                    Home
+                </button>
+            </li>
+
+            <li>
+                <button class="nav-tab"
+                    onclick="switchTab('about')">
+                    About Us
+                </button>
+            </li>
+
+            <li>
+                <button class="nav-tab"
+                    onclick="switchTab('issues')">
+                    Issues
+                </button>
+            </li>
+
+            <li>
+                <button class="nav-tab"
+                    onclick="switchTab('interviews')">
+                    Interviews
+                </button>
+            </li>
+
+            <li>
+                <button class="nav-tab"
+                    onclick="switchTab('blog')">
+                    Blog
+                </button>
+            </li>
+
+            <li>
+                <button class="nav-tab"
+                    onclick="switchTab('submit')">
+                    Submit
+                </button>
+            </li>
+
+            <li>
+                <button class="nav-tab nav-button"
+                    onclick="switchTab('join')">
+                    Join Us
+                </button>
+            </li>
+
+        </ul>
+
+    </nav>
+
+</header>
+
+<main>
+
+<!-- =========================================================
+     HOME
+========================================================= -->
+
+<div id="tab-home" class="tab-content active">
+
+<section class="hero-scrap">
+
+    <div class="container"
+        style="position:relative; min-height:620px;">
+
+        <div class="sticker-row">
+
+            <button class="sticker sticker-about"
+                onclick="switchTab('about')">
+
+                <svg viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="#14304f"
+                    stroke-width="1.6"
+                    stroke-linecap="round"
+                    stroke-linejoin="round">
+
+                    <path d="M4 5.5C4 4.7 4.7 4 5.5 4H11v16H5.5A1.5 1.5 0 0 1 4 18.5z"/>
+                    <path d="M20 5.5c0-.8-.7-1.5-1.5-1.5H13v16h5.5a1.5 1.5 0 0 0 1.5-1.5z"/>
+
+                </svg>
+
+                <span>About Us</span>
+
+            </button>
+
+
+            <button class="sticker sticker-submit"
+                onclick="switchTab('submit')">
+
+                <svg viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="#14304f"
+                    stroke-width="1.6"
+                    stroke-linecap="round"
+                    stroke-linejoin="round">
+
+                    <path d="M3 20l1.6-5.2a1 1 0 0 1 .25-.42L16.4 3.2a1 1 0 0 1 1.42 0l2.98 2.98a1 1 0 0 1 0 1.42L9.4 18.9a1 1 0 0 1-.42.25L3 20Z"/>
+                    <path d="M14 5.5 18.5 10"/>
+
+                </svg>
+
+                <span>Submit Work</span>
+
+            </button>
+
+
+            <button class="sticker sticker-issues"
+                onclick="switchTab('issues')">
+
+                <svg viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="#14304f"
+                    stroke-width="1.6"
+                    stroke-linecap="round"
+                    stroke-linejoin="round">
+
+                    <path d="M5 4h9a2 2 0 0 1 2 2v14l-6.5-3L3 20V6a2 2 0 0 1 2-2Z"/>
+                    <path d="M16 4h1a2 2 0 0 1 2 2v13"/>
+
+                </svg>
+
+                <span>Issues</span>
+
+            </button>
+
+
+            <button class="sticker sticker-join"
+                onclick="switchTab('join')">
+
+                <svg viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="#14304f"
+                    stroke-width="1.6"
+                    stroke-linecap="round"
+                    stroke-linejoin="round">
+
+                    <path d="M17 21v-2a4 4 0 0 0-4-4H7a4 4 0 0 0-4 4v2"/>
+                    <circle cx="10" cy="7" r="4"/>
+                    <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/>
+
+                </svg>
+
+                <span>Join Us</span>
+
+            </button>
+
+        </div>
+
+
+        <div class="hero-scrap-inner">
+
+            <div class="hero-eyebrow">
+                an independent, youth-led magazine
+            </div>
+
+            <h1 class="hero-wordmark">
+                The Women<br>
+                <span class="line2">Archive</span>
+            </h1>
+
+            <svg class="scribble-underline"
+                viewBox="0 0 260 22"
+                fill="none">
+
+                <path
+                    d="M4 14C40 4 70 20 100 10C130 0 160 18 190 8C210 2 235 12 256 6"
+                    stroke="#c1832f"
+                    stroke-width="3"
+                    stroke-linecap="round"/>
+
+            </svg>
+
+            <p class="hero-scrap-copy">
+                Essays, poetry, interviews, art and stories that make room for
+                women's experiences, ideas and perspectives — written by the
+                young people living them.
+            </p>
+
+            <div class="hero-scrap-buttons">
+
+                <button
+                    onclick="switchTab('issues')"
+                    class="btn btn-primary">
+                    Explore the Magazine
+                </button>
+
+                <button
+                    onclick="switchTab('submit')"
+                    class="btn btn-outline">
+                    Submit Your Work
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <button class="blob-note"
+            onclick="switchTab('blog')">
+
+            <span class="tag">psst —</span>
+
+            <p>
+                read what our contributors are writing about this week
+                on the blog
+            </p>
+
+        </button>
+
+    </div>
+
+</section>
+
+
+<section class="intro-strip">
+
+    <div class="container intro-strip-inner">
+
+        <p>
+            "Every voice has a story worth making room for."
+        </p>
+
+        <span>
+            The Women Archive · Est. 2026
+        </span>
+
+    </div>
+
+</section>
+
+
+<section class="section founder-message">
+
+<div class="container">
+
+<div class="founder-grid">
+
+<div class="founder-intro">
+
+    <div class="founder-photo-frame">
+
+        <div class="photo-tape"></div>
+
+        <img
+            class="founder-photo"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJbz032w0arTAr0r8zYfm1MMcn3Lnetl6gMW8DUDSj0g&s"
+            alt="Isha Mittal, Founder and Editor-in-Chief">
+
+        <span class="founder-photo-caption">
+            Isha, at the desk
+        </span>
+
+    </div>
+
+    <div class="section-label">
+        From the Desk of the Founder
+    </div>
+
+    <div class="founder-label">
+        a little note from me —
+    </div>
+
+    <h2>
+        Message from the Founder
+    </h2>
+
+</div>
+
+
+<div class="founder-note">
+
+    <p>Welcome to The Women Archive.</p>
+
+    <p>
+        This magazine began with a simple belief: women's stories deserve
+        space. Not just the stories that make headlines, but the quiet ones
+        too — the experiences, questions, ambitions, memories and ideas that
+        often remain unheard.
+    </p>
+
+    <p>
+        The Women Archive is a space for young women to write, create,
+        question and be seen. Through essays, poetry, interviews, art and
+        conversations, we hope to build an archive that reflects the many
+        ways women understand and experience the world.
+    </p>
+
+    <p>
+        We are still at the beginning, and that is what makes this so
+        exciting. This is an archive we are building together, one story
+        and one voice at a time.
+    </p>
+
+    <p>
+        Thank you for being here, for reading, and for making room for
+        these stories.
+    </p>
+
+    <div class="founder-signature">
+        Isha Mittal
+    </div>
+
+    <span class="founder-role">
+        Founder &amp; Editor-in-Chief · The Women Archive
+    </span>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section class="section submit-section">
+
+<div class="container">
+
+<div class="cfe-banner">
+
+<div class="cfe-content">
+
+<div>
+
+<div class="cfe-tag">
+    calling all writers, poets &amp; artists —
+</div>
+
+<h3>
+    Call for Entries<br>
+    <em>Issue 01 · Astitva</em>
+</h3>
+
+<p>
+    We're opening submissions for our very first issue. Send us your
+    essays, poetry, personal narratives, opinion pieces and art exploring
+    identity, ambition and starting over — we want to hear from you.
+</p>
+
+<div class="cfe-meta">
+
+<div>
+    <span class="label">Theme</span>
+    <span class="value">Astitva</span>
+</div>
+
+<div>
+    <span class="label">Formats</span>
+    <span class="value">Essays · Poetry · Stories · Art</span>
+</div>
+
+<div>
+    <span class="label">Deadline</span>
+    <span class="value">Rolling</span>
+</div>
+
+</div>
+
+</div>
+
+
+<div class="cfe-actions">
+
+<button
+    onclick="switchTab('submit')"
+    class="btn btn-primary">
+    Submit Your Entry →
+</button>
+
+<button
+    onclick="switchTab('join')"
+    class="btn btn-outline"
+    style="color:white;border-color:rgba(255,255,255,.35);">
+    Or join our editorial team →
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+</div>
+
+
+<!-- =========================================================
+     ABOUT US
+========================================================= -->
+
+<div id="tab-about" class="tab-content">
+
+<section class="about-magazine-page">
+
+<div class="about-paper-shadow">
+
+<div class="about-paper">
+
+<div class="paper-tape tape-one"></div>
+<div class="paper-tape tape-two"></div>
+
+<div class="paper-topline">
+    THE WOMEN ARCHIVE · EDITORIAL NOTE · 2026
+</div>
+
+<div class="paper-heading-wrap">
+
+<span class="paper-kicker">
+    a magazine made of voices
+</span>
+
+<h1>
+    About <em>Us</em>
+</h1>
+
+<span class="paper-rule"></span>
+
+</div>
+
+
+<div class="magazine-columns">
+
+<div class="magazine-column">
+
+<div class="dropcap">T</div>
+
+<p>
+    he Women Archive is an independent, youth-led magazine created as a
+    space for women’s stories, ideas and perspectives to be heard,
+    remembered and shared.
+</p>
+
+<p>
+    We believe an archive does not have to be made only of history. It
+    can be made in the present, too — through the essays we write, the
+    questions we ask, the art we create, the conversations we begin and
+    the experiences we choose not to keep silent.
+</p>
+
+<p>
+    From personal essays and poetry to interviews, cultural commentary
+    and visual work, the magazine brings together different ways of
+    seeing and telling. There is room here for the loud stories, the
+    quiet ones and everything in between.
+</p>
+
+</div>
+
+
+<div class="magazine-column">
+
+<div class="margin-note">
+    WHY WE EXIST
+</div>
+
+<div class="ink-box">
+
+<span>OUR BELIEF</span>
+
+<strong>
+    Every voice has a story worth making room for.
+</strong>
+
+</div>
+
+<p>
+    We want The Women Archive to feel less like a publication you simply
+    read and more like a growing collection you can leave something with.
+</p>
+
+<p>
+    A place where a first-time writer can submit a thought beside an
+    experienced storyteller, where a poem can sit beside an interview,
+    and where ordinary experiences can be treated as worthy of attention.
+</p>
+
+</div>
+
+
+<div class="magazine-column visual-column">
+
+<div class="scribble-circle">
+    <span>
+        WRITE<br>
+        CREATE<br>
+        QUESTION
+    </span>
+</div>
+
+<div class="leaf-doodle">
+
+<svg viewBox="0 0 180 160" fill="none">
+
+<path d="M24 133C61 101 92 66 139 18"
+stroke="#96631f"
+stroke-width="2.5"
+stroke-linecap="round"/>
+
+<path d="M54 108C35 96 29 78 34 61C54 64 68 77 67 95"
+stroke="#96631f"
+stroke-width="2"/>
+
+<path d="M77 84C61 68 61 49 72 35C89 45 96 60 90 75"
+stroke="#96631f"
+stroke-width="2"/>
+
+<path d="M101 60C93 43 99 26 114 16C126 31 126 47 117 58"
+stroke="#96631f"
+stroke-width="2"/>
+
+</svg>
+
+</div>
+
+<div class="hand-note">
+    keep the page open<br>
+    for another voice.
+</div>
+
+</div>
+
+</div>
+
+
+<div class="paper-footer">
+
+<span>ISSUE 01 · ASTITVA</span>
+<span>THE WOMEN ARCHIVE</span>
+<span>01</span>
+
+</div>
+
+</div>
+
+</div>
+
+
+<div class="founder-leaf-paper">
+
+<div class="leaf-paper-texture"></div>
+
+<div class="drawn-pen">
+
+<svg viewBox="0 0 220 110" fill="none">
+
+<path
+    d="M24 80L169 25"
+    stroke="#1d2430"
+    stroke-width="8"
+    stroke-linecap="round"/>
+
+<path
+    d="M30 86L18 94L24 78Z"
+    fill="#1d2430"/>
+
+<path
+    d="M161 28L186 18L170 43Z"
+    fill="#c1832f"
+    stroke="#1d2430"
+    stroke-width="2"/>
+
+</svg>
+
+</div>
+
+
+<div class="leaf-paper-inner">
+
+<div class="leaf-paper-label">
+    A NOTE FROM THE FOUNDER
+</div>
+
+<h2>
+    About the <em>Founder</em>
+</h2>
+
+<div class="leaf-divider"></div>
+
+
+<div class="founder-bio-grid">
+
+<div class="founder-letter">
+
+<p>
+    <span class="bio-dropcap">I</span>
+    sha Mittal is a journalist, writer, and poet currently pursuing an
+    MA in Journalism at the Delhi School of Journalism, University of
+    Delhi, following a BA (Hons) in English from Miranda House. She
+    works as a News Writer with the HULAHUL Foundation and as a
+    Journalist with ONE AIR MEDIA, and has previously served as an
+    editor at The World Times and mentored young minds at Agamya:
+    The Mentor-Mentee Club for Social Outreach, Miranda House.
+</p>
+
+<p>
+    Her published works span poetry collections, research papers and
+    book chapters exploring emotions, gender, literature and popular
+    culture — a thread of curiosity that runs through everything she
+    writes. Her words have found homes in Samaj Weekly, The Chai
+    Magazine, The Times of India and Hindustan Times.
+</p>
+
+<p class="founder-quote">
+    "I started this magazine with a simple thought: there are so many
+    women with stories, observations and ideas that deserve a page."
+</p>
+
+</div>
+
+
+<div class="founder-credentials">
+
+<div class="credential-block">
+
+<span class="credential-label">
+    Education
+</span>
+
+<p class="credential-value">
+    MA Journalism, Delhi School of Journalism, University of Delhi<br>
+    BA (Hons) English, Miranda House
+</p>
+
+</div>
+
+
+<div class="credential-block">
+
+<span class="credential-label">
+    Currently
+</span>
+
+<p class="credential-value">
+    News Writer, HULAHUL Foundation<br>
+    Journalist, ONE AIR MEDIA
+</p>
+
+</div>
+
+
+<div class="credential-block">
+
+<span class="credential-label">
+    Published In
+</span>
+
+<p class="credential-value">
+    Samaj Weekly · The Chai Magazine<br>
+    The Times of India · Hindustan Times
+</p>
+
+</div>
+
+
+<div class="credential-block accent">
+
+<span class="credential-label">
+    Recognition
+</span>
+
+<p class="credential-value">
+    Author Editors Choice Award — Rank #47, for the novella
+    <em>A Talk Between You and Them</em>, National Book Writing Fest
+    (NBWF)
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+
+<div class="founder-stamp">
+
+<div class="stamp-ring">
+    <span>ISHA MITTAL</span>
+</div>
+
+<div class="stamp-text">
+
+<strong>Isha Mittal</strong>
+
+<small>
+    Founder &amp; Editor-in-Chief, The Women Archive
+</small>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+</div>
+
+
+<!-- =========================================================
+     ISSUES
+========================================================= -->
+
+<div id="tab-issues" class="tab-content">
+
+<section class="section issues">
+
+<div class="container">
+
+<div class="section-header">
+
+<div>
+
+<div class="section-label">
+    The Archive
+</div>
+
+<h2 class="section-title">
+    Magazine Issues
+</h2>
+
+</div>
+
+<p class="section-description">
+    Explore our collection of themed editions featuring writing, art,
+    interviews and creative work.
+</p>
+
+</div>
+
+
+<div class="issue-grid">
+
+
+<!-- ISSUE 01 -->
+
+<article class="issue">
+
+<div class="issue-cover">
+
+<img
+    src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&w=900&q=85"
+    alt="Astitva Issue 01 cover">
+
+<span class="issue-number">
+    Issue 01 · 2026
+</span>
+
+<h3>
+    Astitva
+</h3>
+
+</div>
+
+<div class="issue-meta">
+
+<strong>
+    Astitva
+</strong>
+
+<span>
+    Identity, existence, becoming and the stories that shape who we are.
+</span>
+
+<span class="coming-soon">
+    Coming Soon
+</span>
+
+</div>
+
+</article>
+
+
+<!-- ISSUE 02 -->
+
+<article class="issue">
+
+<div class="issue-cover">
+
+<img
+    src="https://images.unsplash.com/photo-1496440737103-cd596325d314?auto=format&fit=crop&w=900&q=85"
+    alt="Girlhood Issue 02 cover">
+
+<span class="issue-number">
+    Issue 02 · 2026
+</span>
+
+<h3>
+    Girlhood
+</h3>
+
+</div>
+
+<div class="issue-meta">
+
+<strong>
+    Girlhood
+</strong>
+
+<span>
+    Memory, friendship, growing up and becoming.
+</span>
+
+<span class="coming-soon">
+    Coming Soon
+</span>
+
+</div>
+
+</article>
+
+
+<!-- ISSUE 03 -->
+
+<article class="issue">
+
+<div class="issue-cover">
+
+<img
+    src="https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?auto=format&fit=crop&w=900&q=85"
+    alt="Unfiltered Issue 03 cover">
+
+<span class="issue-number">
+    Issue 03 · 2026
+</span>
+
+<h3>
+    Unfiltered
+</h3>
+
+</div>
+
+<div class="issue-meta">
+
+<strong>
+    Unfiltered
+</strong>
+
+<span>
+    Honest essays and perspectives without editing ourselves down.
+</span>
+
+<span class="coming-soon">
+    Coming Soon
+</span>
+
+</div>
+
+</article>
+
+
+<!-- SPECIAL ZINE -->
+
+<article class="issue">
+
+<div class="issue-cover">
+
+<img
+    src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=900&q=85"
+    alt="Soft Power special zine cover">
+
+<span class="issue-number">
+    Special Zine · 2026
+</span>
+
+<h3>
+    Soft Power
+</h3>
+
+</div>
+
+<div class="issue-meta">
+
+<strong>
+    Soft Power
+</strong>
+
+<span>
+    On quiet strength, creativity and resistance.
+</span>
+
+<span class="coming-soon">
+    Coming Soon
+</span>
+
+</div>
+
+</article>
+
+</div>
+
+</div>
+
+</section>
+
+</div>
+
+
+<!-- =========================================================
+     INTERVIEWS
+========================================================= -->
+
+<div id="tab-interviews" class="tab-content">
+
+<section class="section interviews">
+
+<div class="container">
+
+<div class="section-header">
+
+<div>
+
+<div class="section-label">
+    Conversations
+</div>
+
+<h2 class="section-title">
+    The Interview Desk
+</h2>
+
+</div>
+
+<p class="section-description">
+    Conversations with writers, artists, journalists, creators and young
+    people shaping the world around them.
+</p>
+
+</div>
+
+
+<div class="interview-grid">
+
+
+<article class="interview-card">
+
+<div class="interview-image"
+style="background-image:url('https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=1000&q=85');">
+</div>
+
+<div class="interview-content">
+
+<div class="category">
+    Interview
+</div>
+
+<h3>
+    Finding Your Voice as a Young Creator
+</h3>
+
+<p>
+    A conversation about creativity, confidence and building your own path.
+</p>
+
+<span class="interview-coming">
+    Coming Soon
+</span>
+
+</div>
+
+</article>
+
+
+<article class="interview-card">
+
+<div class="interview-image"
+style="background-image:url('https://images.unsplash.com/photo-1521252659862-eec69941b071?auto=format&fit=crop&w=1000&q=85');">
+</div>
+
+<div class="interview-content">
+
+<div class="category">
+    Unmuted
+</div>
+
+<h3>
+    What Does Success Mean to You?
+</h3>
+
+<p>
+    Moving beyond conventional definitions of ambition and success.
+</p>
+
+<span class="interview-coming">
+    Coming Soon
+</span>
+
+</div>
+
+</article>
+
+
+<article class="interview-card">
+
+<div class="interview-image"
+style="background-image:url('https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=1000&q=85');">
+</div>
+
+<div class="interview-content">
+
+<div class="category">
+    Unmuted
+</div>
+
+<h3>
+    Creating Without Waiting for Permission
+</h3>
+
+<p>
+    An honest conversation about starting before you feel ready.
+</p>
+
+<span class="interview-coming">
+    Coming Soon
+</span>
+
+</div>
+
+</article>
+
+
+</div>
+
+</div>
+
+</section>
+
+</div>
+
+
+<!-- =========================================================
+     BLOG
+========================================================= -->
+
+<div id="tab-blog" class="tab-content">
+
+<section class="section">
+
+<div class="container">
+
+<div class="section-header">
+
+<div>
+
+<div class="section-label">
+    The Journal
+</div>
+
+<h2 class="section-title">
+    From the Blog
+</h2>
+
+</div>
+
+<p class="section-description">
+    Short-form reflections, opinions and observations from our contributors.
+</p>
+
+</div>
+
+
+<div class="blog-list">
+
+
+<!-- BLOG 01 -->
+
+<button class="blog-item"
+onclick="openBlogArticle('say-no')">
+
+<img
+    class="blog-feature-image"
+    src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=85"
+    alt="Notebook and coffee representing reflection and saying no">
+
+<div>
+
+<h3>
+    On Learning to Say No
+</h3>
+
+<p>
+    Anonymous · Personal Essay · 6 min read
+</p>
+
+</div>
+
+<span class="blog-arrow">
+    →
+</span>
+
+</button>
+
+
+<!-- BLOG 02 -->
+
+<div class="blog-item">
+
+<img
+    class="blog-feature-image"
+    src="https://images.unsplash.com/photo-1496449903678-68ddcb189a24?auto=format&fit=crop&w=900&q=85"
+    alt="Young woman representing ambition">
+
+<div>
+
+<h3>
+    Why Young Women Are Reclaiming Their Ambition
+</h3>
+
+<p>
+    Anonymous · Opinion · 5 min read
+</p>
+
+<span class="blog-coming">
+    Coming Soon
+</span>
+
+</div>
+
+<span class="blog-arrow">
+    →
+</span>
+
+</div>
+
+
+<!-- BLOG 03 -->
+
+<div class="blog-item">
+
+<img
+    class="blog-feature-image"
+    src="https://images.unsplash.com/photo-1499209974431-9dddcece7f88?auto=format&fit=crop&w=900&q=85"
+    alt="Nostalgic photograph representing memories">
+
+<div>
+
+<h3>
+    The Complicated Comfort of Nostalgia
+</h3>
+
+<p>
+    Anonymous · Culture · 4 min read
+</p>
+
+<span class="blog-coming">
+    Coming Soon
+</span>
+
+</div>
+
+<span class="blog-arrow">
+    →
+</span>
+
+</div>
+
+
+<!-- BLOG 04 -->
+
+<div class="blog-item">
+
+<img
+    class="blog-feature-image"
+    src="https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?auto=format&fit=crop&w=900&q=85"
+    alt="Woman representing self confidence">
+
+<div>
+
+<h3>
+    What Happens When You Stop Comparing Yourself
+</h3>
+
+<p>
+    Anonymous · Personal Essay · 7 min read
+</p>
+
+<span class="blog-coming">
+    Coming Soon
+</span>
+
+</div>
+
+<span class="blog-arrow">
+    →
+</span>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+</div>
+
+
+<!-- =========================================================
+     BLOG ARTICLE
+========================================================= -->
+
+<div id="blog-article-say-no" class="blog-article">
+
+<div class="container">
+
+<div class="article-container">
+
+<button
+    class="btn btn-outline article-back"
+    onclick="closeBlogArticle()">
+    ← Back to Blog
+</button>
+
+
+<img
+    class="article-feature-image"
+    src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=85"
+    alt="Notebook and coffee representing reflection">
+
+
+<div class="article-category">
+    Personal Essay
+</div>
+
+<h1 class="article-title">
+    Learning to Say No
+</h1>
+
+<div class="article-meta">
+    Anonymous · 6 min read
+</div>
+
+<hr class="article-divider">
+
+
+<div class="article-content">
+
+<p>
+    There is a strange discomfort that comes with saying “no.” We worry
+    that we might disappoint someone, appear selfish, or damage a
+    relationship. So, instead of saying what we truly mean, we say “yes”
+    when we want to say “no.”
+</p>
+
+<p>
+    We agree to plans when we are exhausted. We take on responsibilities
+    when our schedules are already full. We listen when we need space.
+    We help when we have nothing left to give. Somewhere along the way,
+    saying yes becomes easier than being honest.
+</p>
+
+<p>
+    But learning to say no is not about becoming cold or inconsiderate.
+    It is about understanding that our time, energy and boundaries matter
+    too.
+</p>
+
+
+<h2>
+    Why Is Saying No So Difficult?
+</h2>
+
+<p>
+    For many of us, saying no comes with guilt. We have been taught to be
+    helpful, accommodating and available. Especially when we care about
+    people, refusing a request can feel like letting them down.
+</p>
+
+<p>
+    Sometimes, we are afraid of being disliked. Sometimes, we think we
+    need a “good enough” reason to refuse. And sometimes, we simply do
+    not know how to disappoint someone without feeling guilty about it.
+</p>
+
+<p>
+    The irony is that constantly saying yes does not necessarily make us
+    better friends, colleagues or people. It can leave us overwhelmed,
+    frustrated and emotionally exhausted.
+</p>
+
+
+<h2>
+    A No Does Not Need an Explanation
+</h2>
+
+<p>
+    One of the hardest lessons is understanding that you do not always
+    need to justify your boundaries.
+</p>
+
+<p>
+    “I can't make it today” can be enough.
+</p>
+
+<p>
+    “I don't have the capacity for this right now” can be enough.
+</p>
+
+<p>
+    “I'd rather not” can be enough.
+</p>
+
+<p>
+    We often feel the need to create elaborate explanations because we
+    want our no to be accepted. But a boundary does not become valid
+    only when someone else agrees with it.
+</p>
+
+
+<h2>
+    Saying No Without Being Cruel
+</h2>
+
+<p>
+    Saying no does not have to mean being rude. You can be firm while
+    still being kind.
+</p>
+
+<p>
+    Instead of disappearing from a conversation or responding harshly,
+    you can simply say:
+</p>
+
+<p>
+    “Thank you for asking, but I won't be able to take this on.”
+</p>
+
+<p>
+    “I appreciate the invitation, but I need some time for myself.”
+</p>
+
+<p>
+    “I understand that this is important to you, but I can't commit to
+    it right now.”
+</p>
+
+<p>
+    These sentences may feel uncomfortable at first. With practice,
+    however, they become easier.
+</p>
+
+
+<h2>
+    The Guilt Might Stay
+</h2>
+
+<p>
+    Perhaps the most important thing to remember is that feeling guilty
+    does not mean you have made the wrong decision.
+</p>
+
+<p>
+    You can feel guilty and still have a valid boundary.
+</p>
+
+<p>
+    You can care about someone and still refuse their request.
+</p>
+
+<p>
+    You can love your friends and still need time away from them.
+</p>
+
+<p>
+    You can want to help and still recognise that you cannot do
+    everything.
+</p>
+
+<p>
+    The goal is not necessarily to stop feeling guilty overnight. The
+    goal is to stop allowing guilt to make every decision for you.
+</p>
+
+
+<h2>
+    Start Small
+</h2>
+
+<p>
+    You do not have to suddenly become someone who refuses everything.
+</p>
+
+<p>
+    Start with small things.
+</p>
+
+<p>
+    Decline an invitation when you genuinely want to stay home. Say no
+    to an unnecessary commitment. Take a moment before automatically
+    agreeing to a request.
+</p>
+
+<p>
+    Instead of immediately saying, “Sure, I'll do it,” try saying,
+    “Let me check and get back to you.”
+</p>
+
+<p>
+    That small pause can make a difference. It gives you time to ask
+    yourself: <em>Do I actually want to do this? Do I have the time? Am I
+    agreeing because I want to, or because I am afraid of saying no?</em>
+</p>
+
+
+<h2>
+    Your Time Is Yours Too
+</h2>
+
+<p>
+    There will always be someone who needs something from you. Another
+    message to answer. Another favour to do. Another responsibility to
+    accept.
+</p>
+
+<p>
+    If you keep giving without considering yourself, eventually there
+    may be nothing left to give.
+</p>
+
+<p>
+    Learning to say no is therefore not simply about refusing other
+    people. It is about saying yes to yourself.
+</p>
+
+<p>
+    Yes to rest.
+</p>
+
+<p>
+    Yes to your priorities.
+</p>
+
+<p>
+    Yes to your peace.
+</p>
+
+<p>
+    Yes to the things that genuinely matter to you.
+</p>
+
+<p>
+    And perhaps that is the real lesson behind learning to say no: you
+    are not responsible for being available to everyone, all the time.
+</p>
+
+<p>
+    Sometimes, the kindest thing you can do for yourself is simply say,
+    “No, I can't.”
+</p>
+
+<p>
+    And let that be enough.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- =========================================================
+     SUBMIT
+========================================================= -->
+
+<div id="tab-submit" class="tab-content">
+
+<section class="form-page">
+
+<div class="container form-container">
+
+<div class="form-header">
+
+<div class="section-label">
+    Submit Your Work
+</div>
+
+<h1>
+    Share your story.
+</h1>
+
+<p>
+    We accept personal essays, poetry, cultural commentary, fiction,
+    and art submissions. Fill out the form below to share your draft
+    or pitch with our editors.
+</p>
+
+</div>
+
+<hr class="form-divider">
+
+
+<div class="form-success" id="submitSuccess">
+    Thank you — your submission has been sent to our editors.
+    We'll be in touch by email soon.
+</div>
+
+<div class="form-error" id="submitError">
+    Something went wrong sending your submission.
+    Please try again, or email us directly.
+</div>
+
+
+<form
+    action="https://formspree.io/f/YOUR_SUBMIT_FORM_ID"
+    method="POST"
+    enctype="multipart/form-data"
+    id="submitWorkForm">
+
+<input
+    type="hidden"
+    name="_subject"
+    value="The Women Archive — New Work Submission">
+
+
+<div class="form-grid">
+
+<div class="form-group">
+
+<label for="sub-name">
+    Full Name <span class="required">*</span>
+</label>
+
+<input
+    type="text"
+    id="sub-name"
+    name="name"
+    required>
+
+</div>
+
+
+<div class="form-group">
+
+<label for="sub-email">
+    Email Address <span class="required">*</span>
+</label>
+
+<input
+    type="email"
+    id="sub-email"
+    name="_replyto"
+    required>
+
+</div>
+
+
+<div class="form-group">
+
+<label for="sub-category">
+    Submission Category <span class="required">*</span>
+</label>
+
+<select
+    id="sub-category"
+    name="category"
+    required>
+
+<option value="">
+    Select a category
+</option>
+
+<option>
+    Personal Essay
+</option>
+
+<option>
+    Poetry
+</option>
+
+<option>
+    Cultural Commentary / Opinion
+</option>
+
+<option>
+    Fiction
+</option>
+
+<option>
+    Visual Art / Photography
+</option>
+
+<option>
+    Other
+</option>
+
+</select>
+
+</div>
+
+
+<div class="form-group">
+
+<label for="sub-title">
+    Title of Your Work <span class="required">*</span>
+</label>
+
+<input
+    type="text"
+    id="sub-title"
+    name="title"
+    required>
+
+</div>
+
+
+<div class="form-group full">
+
+<label for="sub-bio">
+    Short Author Bio
+</label>
+
+<textarea
+    id="sub-bio"
+    name="author_bio"
+    placeholder="A brief 2-3 sentence bio about yourself.">
+</textarea>
+
+</div>
+
+
+<div class="form-group full">
+
+<label for="sub-file">
+    Upload File / Draft <span class="required">*</span>
+</label>
+
+<div class="file-box">
+
+<input
+    type="file"
+    id="sub-file"
+    name="submission_file"
+    accept=".pdf,.doc,.docx"
+    required>
+
+<div class="form-note">
+    Accepted formats: PDF, DOC, DOCX
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+<div class="checkbox">
+
+<input
+    type="checkbox"
+    id="sub-agree"
+    required>
+
+<label for="sub-agree">
+    I confirm that this is my original work and has not been plagiarized.
+</label>
+
+</div>
+
+
+<button
+    type="submit"
+    class="btn btn-primary">
+
+    Submit Piece
+
+</button>
+
+</form>
+
+</div>
+
+</section>
+
+</div>
+
+
+<!-- =========================================================
+     JOIN
+========================================================= -->
+
+<div id="tab-join" class="tab-content">
+
+<section class="form-page">
+
+<div class="container form-container">
+
+<div class="form-header">
+
+<div class="section-label">
+    Join the Team
+</div>
+
+<h1>
+    Be part of The Women Archive.
+</h1>
+
+<p>
+    We're looking for writers, editors, designers, photographers,
+    social media creatives and campus ambassadors who want to contribute
+    to an independent youth-led magazine.
+</p>
+
+</div>
+
+<hr class="form-divider">
+
+
+<div class="form-success" id="joinSuccess">
+    Thank you for applying — your application has been sent to our team.
+    We'll be in touch by email soon.
+</div>
+
+<div class="form-error" id="joinError">
+    Something went wrong sending your application.
+    Please try again, or email us directly.
+</div>
+
+
+<form
+    action="https://formspree.io/f/YOUR_JOIN_FORM_ID"
+    method="POST"
+    enctype="multipart/form-data"
+    id="joinForm">
+
+<input
+    type="hidden"
+    name="_subject"
+    value="The Women Archive — Join the Team Application">
+
+
+<div class="form-grid">
+
+<div class="form-group">
+
+<label for="join-name">
+    Full Name <span class="required">*</span>
+</label>
+
+<input
+    type="text"
+    id="join-name"
+    name="name"
+    required>
+
+</div>
+
+
+<div class="form-group">
+
+<label for="join-email">
+    Email Address <span class="required">*</span>
+</label>
+
+<input
+    type="email"
+    id="join-email"
+    name="_replyto"
+    required>
+
+</div>
+
+
+<div class="form-group">
+
+<label for="join-college">
+    College / University
+</label>
+
+<input
+    type="text"
+    id="join-college"
+    name="college">
+
+</div>
+
+
+<div class="form-group">
+
+<label for="join-role">
+    Role You're Applying For <span class="required">*</span>
+</label>
+
+<select
+    id="join-role"
+    name="role"
+    required>
+
+<option value="">
+    Select a role
+</option>
+
+<option>
+    Writer
+</option>
+
+<option>
+    Editor
+</option>
+
+<option>
+    Graphic Designer
+</option>
+
+<option>
+    Photographer
+</option>
+
+<option>
+    Social Media
+</option>
+
+<option>
+    Campus Ambassador
+</option>
+
+<option>
+    Other
+</option>
+
+</select>
+
+</div>
+
+
+<div class="form-group full">
+
+<label for="join-portfolio">
+    Portfolio / LinkedIn / Instagram
+</label>
+
+<input
+    type="url"
+    id="join-portfolio"
+    name="portfolio"
+    placeholder="https://">
+
+</div>
+
+
+<div class="form-group full">
+
+<label for="join-why">
+    Why would you like to join The Women Archive?
+    <span class="required">*</span>
+</label>
+
+<textarea
+    id="join-why"
+    name="why"
+    placeholder="Tell us about yourself and why you would like to be part of the team."
+    required>
+</textarea>
+
+</div>
+
+
+<div class="form-group full">
+
+<label for="join-cv">
+    Upload CV <span class="required">*</span>
+</label>
+
+<div class="file-box">
+
+<input
+    type="file"
+    id="join-cv"
+    name="cv"
+    accept=".pdf,.doc,.docx"
+    required>
+
+<div class="form-note">
+    Accepted formats: PDF, DOC, DOCX
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+<div class="checkbox">
+
+<input
+    type="checkbox"
+    id="join-agree"
+    required>
+
+<label for="join-agree">
+    I confirm that the information provided is accurate and true.
+</label>
+
+</div>
+
+
+<button
+    type="submit"
+    class="btn btn-primary">
+
+    Submit Application
+
+</button>
+
+</form>
+
+</div>
+
+</section>
+
+</div>
+
+</main>
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer>
+
+<div class="container">
+
+<div class="footer-grid">
+
+<div>
+
+<div class="footer-logo">
+    <span>The Women Archive</span>
+</div>
+
+</div>
+
+
+<div class="footer-column">
+
+<h4>
+    Follow Us
+</h4>
+
+<a href="#" target="_blank">
+    Instagram
+</a>
+
+<a href="#" target="_blank">
+    LinkedIn
+</a>
+
+<a href="#" target="_blank">
+    Twitter
+</a>
+
+</div>
+
+
+<div class="footer-column">
+
+<h4>
+    For Queries
+</h4>
+
+<a href="mailto:thewomenarchive05@gmail.com">
+    thewomenarchive05@gmail.com
+</a>
+
+</div>
+
+</div>
+
+
+<div class="footer-bottom">
+
+<p>
+    &copy; 2026 The Women Archive. All rights reserved.
+</p>
+
+</div>
+
+</div>
+
+</footer>
+
+
+<script>
+
+/* =========================================================
+   TAB NAVIGATION
+========================================================= */
+
+function switchTab(tabId) {
+
+    const contents =
+        document.querySelectorAll('.tab-content');
+
+    const buttons =
+        document.querySelectorAll('.nav-tab');
+
+
+    contents.forEach(content => {
+        content.classList.remove('active');
+    });
+
+
+    buttons.forEach(button => {
+        button.classList.remove('active');
+    });
+
+
+    const targetContent =
+        document.getElementById('tab-' + tabId);
+
+
+    if (targetContent) {
+        targetContent.classList.add('active');
+    }
+
+
+    const clickedButton =
+        Array.from(buttons).find(btn =>
+            btn.getAttribute('onclick') &&
+            btn.getAttribute('onclick').includes(tabId)
+        );
+
+
+    if (
+        clickedButton &&
+        !clickedButton.classList.contains('nav-button')
+    ) {
+        clickedButton.classList.add('active');
+    }
+
+
+    const navLinks =
+        document.getElementById('navLinks');
+
+
+    if (
+        navLinks &&
+        navLinks.classList.contains('active')
+    ) {
+        navLinks.classList.remove('active');
+    }
+
+
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+
+}
+
+
+/* =========================================================
+   BLOG ARTICLE
+========================================================= */
+
+function openBlogArticle(articleId) {
+
+    document
+        .querySelectorAll('.tab-content')
+        .forEach(tab => {
+            tab.classList.remove('active');
+        });
+
+
+    document
+        .querySelectorAll('.blog-article')
+        .forEach(article => {
+            article.classList.remove('active');
+        });
+
+
+    const article =
+        document.getElementById(
+            'blog-article-' + articleId
+        );
+
+
+    if (article) {
+        article.classList.add('active');
+    }
+
+
+    document
+        .querySelectorAll('.nav-tab')
+        .forEach(button => {
+            button.classList.remove('active');
+        });
+
+
+    const blogButton =
+        Array.from(
+            document.querySelectorAll('.nav-tab')
+        ).find(button =>
+            button.getAttribute('onclick') &&
+            button.getAttribute('onclick')
+                .includes("switchTab('blog')")
+        );
+
+
+    if (blogButton) {
+        blogButton.classList.add('active');
+    }
+
+
+    const navLinks =
+        document.getElementById('navLinks');
+
+
+    if (
+        navLinks &&
+        navLinks.classList.contains('active')
+    ) {
+        navLinks.classList.remove('active');
+    }
+
+
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+
+}
+
+
+/* =========================================================
+   CLOSE BLOG ARTICLE
+========================================================= */
+
+function closeBlogArticle() {
+
+    document
+        .querySelectorAll('.blog-article')
+        .forEach(article => {
+            article.classList.remove('active');
+        });
+
+
+    switchTab('blog');
+
+}
+
+
+/* =========================================================
+   MOBILE MENU
+========================================================= */
+
+const menuButton =
+    document.getElementById('menuButton');
+
+const navLinks =
+    document.getElementById('navLinks');
+
+
+if (menuButton && navLinks) {
+
+    menuButton.addEventListener('click', () => {
+
+        navLinks.classList.toggle('active');
+
+    });
+
+}
+
+
+/* =========================================================
+   AJAX FORMS
+========================================================= */
+
+function wireForm(
+    formId,
+    successId,
+    errorId
+) {
+
+    const form =
+        document.getElementById(formId);
+
+    const success =
+        document.getElementById(successId);
+
+    const error =
+        document.getElementById(errorId);
+
+
+    if (!form) return;
+
+
+    form.addEventListener(
+        'submit',
+        async (e) => {
+
+            e.preventDefault();
+
+            success.classList.remove('active');
+            error.classList.remove('active');
+
+
+            try {
+
+                const response =
+                    await fetch(
+                        form.action,
+                        {
+                            method: 'POST',
+                            body: new FormData(form),
+                            headers: {
+                                'Accept':
+                                    'application/json'
+                            }
+                        }
+                    );
+
+
+                if (response.ok) {
+
+                    success.classList.add('active');
+
+                    form.reset();
+
+                    success.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'center'
+                    });
+
+                } else {
+
+                    error.classList.add('active');
+
+                }
+
+            } catch (err) {
+
+                error.classList.add('active');
+
+            }
+
+        }
+    );
+
+}
+
+
+/* =========================================================
+   CONNECT FORMS
+========================================================= */
+
+wireForm(
+    'submitWorkForm',
+    'submitSuccess',
+    'submitError'
+);
+
+wireForm(
+    'joinForm',
+    'joinSuccess',
+    'joinError'
+);
+
+</script>
+
+</body>
+</html>
